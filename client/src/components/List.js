@@ -1,4 +1,5 @@
 import React from "react";
+import "boxicons";
 
 const obj = [
   {
@@ -6,7 +7,7 @@ const obj = [
     color: "rgb(255, 99, 132)",
   },
   {
-    type: "Investment",
+    name: "Investment",
     color: "#f9c74f",
   },
   {
@@ -31,8 +32,15 @@ function Transaction({ category }) {
   return (
     <div
       className="item flex justify-center bg-gray-50 py-2 rounded-r"
-      style={{ borderRight: `8px solid ${category} ` }}
+      style={{ borderRight: `8px solid ${category.color ?? "#e5e5e5"} ` }}
     >
+      <button className="px-3">
+        <box-icon
+          color={category.color ?? "#e5e5e5"}
+          size="15px"
+          name="trash"
+        ></box-icon>
+      </button>
       <span className="block w-full">{category.name ?? ""}</span>
     </div>
   );
