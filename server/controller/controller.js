@@ -41,7 +41,7 @@ async function create_Transaction(req, res) {
     if (!err) return res.json(create);
     return res
       .status(400)
-      .json({ message: `Erro while creating transaction ${err}` });
+      .json({ message: `r while creating transaction ${err}` });
   });
 }
 
@@ -94,7 +94,7 @@ async function get_Labels(req, res) {
       res.json(data);
     })
     .catch((error) => {
-      res.status(400).json("Looup Collection Error");
+      res.status(400).json("Loop Collection Error");
     });
 }
 
